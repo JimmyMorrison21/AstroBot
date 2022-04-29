@@ -11,7 +11,6 @@ class Horoscope:
 
     def get_predict(self):
         working_url = f'https://horo.mail.ru/prediction/{self.mark}/{self.day}/'
-        print(working_url)
         res = requests.get(working_url)
         soup = BeautifulSoup(res.content, 'html.parser')
         header = soup.find('h1', attrs= {'class': "hdr__inner"})

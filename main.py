@@ -21,7 +21,7 @@ def send_welcome(message):
     bot.send_message(message.chat.id, loaded_template_file['start'], reply_markup=markup)
 
 
-markup = telebot.types.InlineKeyboardMarkup(row_width=2)
+markup = telebot.types.InlineKeyboardMarkup(row_width=1)
 itembtnaries = telebot.types.InlineKeyboardButton('Овен' + '♈',callback_data = 'aries') #1
 itembtntaurus = telebot.types.InlineKeyboardButton('Телец' + '♉', callback_data = 'taurus') #2
 itembtngemini = telebot.types.InlineKeyboardButton('Близнецы' + '♊', callback_data = 'gemini') #3
@@ -34,10 +34,10 @@ itembtnsagittarius = telebot.types.InlineKeyboardButton('Стрелец' + '♐'
 itembtncapricron = telebot.types.InlineKeyboardButton('Козерог' + '♑', callback_data ='capricorn') #10
 itembtnaquarius = telebot.types.InlineKeyboardButton('Водолей' + '♒', callback_data ='aquarius') #11
 itembtnpisces = telebot.types.InlineKeyboardButton('Рыбы' + '♓', callback_data ='pisces') #12
-markup.row(itembtnaries,itembtntaurus, itembtngemini,itembtncancer)
-markup.row(itembtnleo, itembtnvirgo, itembtnlibra, itembtnscorpio )
-markup.row(itembtnsagittarius,itembtncapricron,itembtnaquarius,itembtnpisces)
-
+markup.row(itembtnaries,itembtntaurus, itembtngemini)
+markup.row(itembtnleo, itembtnvirgo, itembtnlibra)
+markup.row(itembtnsagittarius,itembtncapricron,itembtnaquarius)
+markup.row(itembtncancer, itembtnscorpio ,itembtnpisces)
 
 @bot.callback_query_handler(func= lambda call: True)
 def get_text(call):
