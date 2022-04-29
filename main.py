@@ -28,10 +28,10 @@ itembtngemini = telebot.types.InlineKeyboardButton('Близнецы' + '♊', c
 itembtncancer = telebot.types.InlineKeyboardButton('Рак' + '♋', callback_data = 'cancer') #4
 itembtnleo = telebot.types.InlineKeyboardButton('Лев' + '♌', callback_data = 'leo') #5
 itembtnvirgo = telebot.types.InlineKeyboardButton('Дева' + "♍", callback_data = 'virgo') #6
-itembtnlibra = telebot.types.InlineKeyboardButton('Весы' + '♎', callback_data = 'libro') #7
+itembtnlibra = telebot.types.InlineKeyboardButton('Весы' + '♎', callback_data = 'libra') #7
 itembtnscorpio = telebot.types.InlineKeyboardButton('Скорпион' + '♏', callback_data = 'scorpio') #8
 itembtnsagittarius = telebot.types.InlineKeyboardButton('Стрелец' + '♐', callback_data = 'sagittarius') #9
-itembtncapricron = telebot.types.InlineKeyboardButton('Козерог' + '♑', callback_data ='capricron') #10
+itembtncapricron = telebot.types.InlineKeyboardButton('Козерог' + '♑', callback_data ='capricorn') #10
 itembtnaquarius = telebot.types.InlineKeyboardButton('Водолей' + '♒', callback_data ='aquarius') #11
 itembtnpisces = telebot.types.InlineKeyboardButton('Рыбы' + '♓', callback_data ='pisces') #12
 markup.row(itembtnaries,itembtntaurus, itembtngemini,itembtncancer)
@@ -57,4 +57,4 @@ def get_keyboard(message):
 
 
 if __name__ == '__main__':
-    bot.polling(none_stop=True, interval=0)
+    bot.polling(none_stop=True, interval= 0 )

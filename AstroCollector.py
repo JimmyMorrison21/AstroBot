@@ -11,6 +11,7 @@ class Horoscope:
 
     def get_predict(self):
         working_url = f'https://horo.mail.ru/prediction/{self.mark}/{self.day}/'
+        print(working_url)
         res = requests.get(working_url)
         soup = BeautifulSoup(res.content, 'html.parser')
         header = soup.find('h1', attrs= {'class': "hdr__inner"})
@@ -18,5 +19,5 @@ class Horoscope:
         dict[self.mark] = header.text + " ☯ " + "\n" + data.text.replace('\n',' ')
         return dict
 
-# taurus = Horoscope(mark = 'taurus')
+# taurus = Horoscope(mark = 'capricorn')
 # print(taurus.get_predict())
